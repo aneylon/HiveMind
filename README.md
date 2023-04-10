@@ -1,5 +1,7 @@
 # Hive Mind
 
+Running live [here](https://hivemind-ley1.onrender.com/)
+
 A project for managing Necromunda and other skirmish game resources.
 
 # Setup
