@@ -14,7 +14,17 @@ todo:
 
 # Resource links
 
-todo:
+- [React](https://reactjs.org/)
+- [React Router](https://reactrouter.com)
+- [Redux](https://redux.js.org/)
+- [React Redux](https://react-redux.js.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Mui](https://mui.com/)
+- [React Chart Js](https://github.com/reactchartjs/react-chartjs-2)
+- [Redux Devtools](https://github.com/reduxjs/redux-devtools)
+- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+- [JSON Server](https://github.com/typicode/json-server)
+- [Date FNS](https://date-fns.org)
 
 # Plugins, Settings, etc,.
 
