@@ -10,7 +10,20 @@ todo:
 
 # Todos
 
-todo:
+- [ ] News
+
+  - [ ] Basic component
+  - [ ] Show list of news / updates with date
+  - [ ] Get news from fake back end
+  - [ ] Component for admin to add news
+
+- [ ] Admin Section
+- [ ] News - Add, Edit, Delete
+
+- [ ] Users
+  - [ ] Sign Up
+  - [ ] Sign In
+  - [ ] Sign Out
 
 # Resource links
 
