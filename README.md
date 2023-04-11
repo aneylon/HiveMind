@@ -6,7 +6,11 @@ A project for managing Necromunda and other skirmish game resources.
 
 # Setup
 
-todo:
+To run the dev server locally:
+
+```
+npm run devServer
+```
 
 # Todos
 
@@ -30,6 +34,7 @@ todo:
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com)
 - [React Hook Form](https://react-hook-form.com/)
+- [React Spinners](https://www.davidhu.io/react-spinners/)
 - [Redux](https://redux.js.org/)
 - [React Redux](https://react-redux.js.org/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
