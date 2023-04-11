@@ -11,7 +11,7 @@ export const News = () => {
       <h1>News</h1>
       <ul>
         {newsItems.map((newsItem) => {
-          return <NewsItem data={newsItem} />;
+          return <NewsItem key={newsItem.id} data={newsItem} />;
         })}
       </ul>
     </div>
