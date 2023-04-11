@@ -16,6 +16,7 @@ todo:
 
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com)
+- [React Hook Form](https://react-hook-form.com/)
 - [Redux](https://redux.js.org/)
 - [React Redux](https://react-redux.js.org/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
