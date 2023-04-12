@@ -5,13 +5,8 @@ import { useEffect, useState } from "react";
 export const News = () => {
   const [newsItems, setNewsItems] = useState([]);
 
-  // const newsItems = [
-  //   { id: 1, title: "Item One", dateTime: "04/15/23" },
-  //   { id: 2, title: "Item Two", dateTime: "04/12/23" },
-  //   { id: 3, title: "Item Three", dateTime: "04/09/23" },
-  // ];
   useEffect(() => {
-    fetch("http://localhost:4200/news")
+    fetch("/news")
       .then((response) => {
         if (response.ok) {
           return response.json();
