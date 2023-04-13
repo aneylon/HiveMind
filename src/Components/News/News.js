@@ -11,11 +11,12 @@ export const News = () => {
         if (response.ok) {
           return response.json();
         }
+        return [];
       })
       .then((data) => {
-        console.log(data);
         setNewsItems(data);
-      });
+      })
+      .catch((error) => console.error);
   }, []);
   return (
     <div>

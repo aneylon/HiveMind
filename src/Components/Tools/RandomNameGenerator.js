@@ -7,7 +7,6 @@ const RandomNameGenerator = () => {
   const letters = "abcdefghijklmnopqrstuvwxyz";
 
   const GenerateNames = (data) => {
-    console.log(data);
     let newNames = [];
     for (let i = 0; i < data.numberToGenerate; i++) {
       let newName = [];
@@ -24,7 +23,6 @@ const RandomNameGenerator = () => {
       }
       newNames.push(newName.join(" "));
     }
-    console.log(newNames);
     setNames(newNames);
 
     setFocus("numberOfParts", { shouldSelect: true });
