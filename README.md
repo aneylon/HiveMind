@@ -6,7 +6,13 @@ A project for managing Necromunda and other skirmish game resources.
 
 # Setup
 
-To run the dev server locally:
+Install packages :
+
+```
+npm i(nstall)
+```
+
+To run the dev server locally :
 
 ```
 npm run devServer
