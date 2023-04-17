@@ -20,6 +20,11 @@ npm run devServer
 
 # Todos
 
+- [ ] Set up Testing
+  - [ ] Cypress
+  - [ ] React Testing Library
+- [ ] Set up CI / CD (Circle, Travis, Jenkins)
+
 - [ ] News
 
   - [ ] Basic component
