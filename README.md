@@ -1,6 +1,8 @@
 # Hive Mind
 
-Running live [here](https://hivemind-ley1.onrender.com/)
+Running live : [here](https://hivemind-ley1.onrender.com/)
+
+Build Status : [![CircleCI](https://dl.circleci.com/status-badge/img/gh/aneylon/HiveMind/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/aneylon/HiveMind/tree/main)
 
 A project for managing Necromunda and other skirmish game resources.
 
