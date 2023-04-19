@@ -20,6 +20,12 @@ To run the dev server locally :
 npm run devServer
 ```
 
+To run react testing library tests :
+
+```
+npm t(est)
+```
+
 # Todos
 
 - [ ] Set up Testing

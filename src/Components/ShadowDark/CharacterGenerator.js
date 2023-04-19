@@ -18,10 +18,14 @@ export function selectClass(abilities, characterClasses) {
     return 0;
   });
   let possibleClasses = sortedAbilities.reduce((acc, cur, index) => {
-    console.log(acc, cur, index);
-  }, {});
-  console.log(sortedAbilities);
-  return characterClasses[1];
+    characterClasses.forEach((characterClass) => {
+      if (cur.name === characterClass.highStat) {
+        acc.push(characterClass);
+      }
+    });
+    return acc;
+  }, []);
+  return possibleClasses[0];
 }
 export const CharacterGenerator = () => {
   const [abilities, setAbilities] = useState({});
@@ -35,23 +39,8 @@ export const CharacterGenerator = () => {
       wisdom: rollAbilityScore(),
       charisma: rollAbilityScore(),
     };
-    console.log(abilities);
     setAbilities(abilities);
-    setCharacterClass(determineClass(abilities));
-  };
-  const determineClass = (abilities) => {
-    let max = { name: "", value: 0 };
-    for (let ability in abilities) {
-      if (abilities[ability] > max.value) {
-        max.name = ability;
-        max.value = abilities[ability];
-      }
-    }
-    let selectedClass = characterClasses.filter((characterClass) => {
-      if (characterClass.highStat === max.name) return true;
-      return false;
-    });
-    return selectedClass[0];
+    setCharacterClass(selectClass(abilities, characterClasses));
   };
   const rollAbilityScore = () => {
     return randomNumber(6) + randomNumber(6) + randomNumber(6);
