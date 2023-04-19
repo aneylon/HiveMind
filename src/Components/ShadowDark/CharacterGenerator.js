@@ -1,15 +1,31 @@
 import { useState } from "react";
 import { randomNumber } from "../../Shared/Random";
 
+export const characterClasses = [
+  { name: "Fighter", highStat: "strength", hitDie: 8 },
+  { name: "Thief", highStat: "dexterity", hitDie: 4 },
+  { name: "Wizard", highStat: "intelligence", hitDie: 4 },
+  { name: "Priest", highStat: "wisdom", hitDie: 6 },
+];
+export function selectClass(abilities, characterClasses) {
+  let sortedAbilities = [];
+  for (let ability in abilities) {
+    sortedAbilities.push({ name: ability, value: abilities[ability] });
+  }
+  sortedAbilities.sort((a, b) => {
+    if (a.value > b.value) return -1;
+    if (a.value < b.value) return 1;
+    return 0;
+  });
+  let possibleClasses = sortedAbilities.reduce((acc, cur, index) => {
+    console.log(acc, cur, index);
+  }, {});
+  console.log(sortedAbilities);
+  return characterClasses[1];
+}
 export const CharacterGenerator = () => {
   const [abilities, setAbilities] = useState({});
   const [characterClass, setCharacterClass] = useState({});
-  const characterClasses = [
-    { name: "Fighter", highStat: "strength", hitDie: 8 },
-    { name: "Thief", highStat: "dexterity", hitDie: 4 },
-    { name: "Wizard", highStat: "intelligence", hitDie: 4 },
-    { name: "Priest", highStat: "wisdom", hitDie: 6 },
-  ];
   const generateCharacter = () => {
     const abilities = {
       strength: rollAbilityScore(),
@@ -32,7 +48,8 @@ export const CharacterGenerator = () => {
       }
     }
     let selectedClass = characterClasses.filter((characterClass) => {
-      if (characterClass.highStat === max.name) return characterClass;
+      if (characterClass.highStat === max.name) return true;
+      return false;
     });
     return selectedClass[0];
   };
