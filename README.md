@@ -28,10 +28,11 @@ npm t(est)
 
 # Todos
 
-- [ ] Set up Testing
+- [x] Add Router
+- [x] Set up Testing
   - [ ] Cypress
-  - [ ] React Testing Library
-- [ ] Set up CI / CD (Circle, Travis, Jenkins)
+  - [x] React Testing Library
+- [x] Set up CI / CD (Circle, Travis, Jenkins)
 
 - [ ] News
 
