@@ -7,7 +7,6 @@ export const Dashboard = () => {
       <h1>Dashboard!</h1>
 
       <News />
-      <Tools />
     </>
   );
 };
