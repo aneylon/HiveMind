@@ -26,6 +26,11 @@ To run react testing library tests :
 npm t(est)
 ```
 
+# Contributing
+
+Pull requests can be made against the main branch.
+Be sure there are supporting tests for any changes that are made or features that are added.
+
 # Todos
 
 - [x] Add Router
