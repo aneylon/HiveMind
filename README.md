@@ -47,7 +47,8 @@ Be sure there are supporting tests for any changes that are made or features tha
   - [ ] Component for admin to add news
 
 - [ ] Admin Section
-- [ ] News - Add, Edit, Delete
+
+  - [-] News - Add, Edit, Delete
 
 - [ ] Users
   - [ ] Sign Up
