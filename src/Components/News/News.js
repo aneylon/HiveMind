@@ -1,12 +1,13 @@
 import { PuffLoader } from "react-spinners";
 import { NewsItem } from "./NewsItem";
 import { useEffect, useState } from "react";
+import { request } from "../../Api/utils";
 
 export const News = () => {
   const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
-    fetch("/news")
+    request("GET", "/news")
       .then((response) => {
         if (response.ok) {
           return response.json();
