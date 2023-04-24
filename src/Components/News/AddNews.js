@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { request } from "../../Api/utils";
 
 export const AddNews = () => {
   const { register, handleSubmit, reset, setFocus } = useForm();
@@ -6,17 +7,15 @@ export const AddNews = () => {
   const addNewsItem = (data) => {
     let addTime = new Date().toUTCString();
     data.dateTime = addTime;
-    const response = fetch("/news", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-    response.then((res) => {
-      if (res.ok === true) {
-        reset();
-        setFocus("title");
-      }
-    });
+    request("POST", "/news", data)
+      .then((response) => {
+        console.log({ response });
+        if (response.ok) {
+          reset();
+          setFocus("title");
+        }
+      })
+      .catch((error) => console.error);
   };
   return (
     <>

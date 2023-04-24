@@ -33,20 +33,22 @@ Be sure there are supporting tests for any changes that are made or features tha
 
 # Todos
 
+- [ ] Add toasts for success and error messages to user.
+
 - [x] Add Router
 - [x] Set up Testing
   - [ ] Cypress
   - [x] React Testing Library
 - [x] Set up CI / CD (Circle, Travis, Jenkins)
 
-- [ ] News
+- [x] News
 
-  - [ ] Basic component
-  - [ ] Show list of news / updates with date
-  - [ ] Get news from fake back end
-  - [ ] Component for admin to add news
+  - [x] Basic component
+  - [x] Show list of news / updates with date
+  - [x] Get news from fake back end
+  - [x] Component for admin to add news
 
-- [ ] Admin Section
+- [-] Admin Section
 
   - [-] News - Add, Edit, Delete
 
