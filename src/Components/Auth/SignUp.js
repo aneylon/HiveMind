@@ -2,7 +2,14 @@ import { Box, Button, TextField } from "@mui/material";
 import { useForm } from "react-hook-form";
 
 export const SignUp = () => {
-  const { handleSubmit, register } = useForm();
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm({
+    mode: "onChange",
+    reValidateMode: "onChange",
+  });
   const submitSignUp = (data) => {
     console.log({ data });
   };
@@ -12,24 +19,26 @@ export const SignUp = () => {
       <Box
         component="form"
         onSubmit={handleSubmit(submitSignUp)}
-        sx={{ width: 300 }}
+        sx={{ width: 450 }}
       >
         <TextField
           type="email"
           name="email"
           id="signUpEmail"
           placeholder="email"
-          margin="dense"
+          margin="normal"
           autoComplete="on"
           autoFocus
           fullWidth
           required
           label="email"
           InputLabelProps={{ shrink: true }}
-          {...register("email", { required: true })}
+          {...register("email", { required: "email is required" })}
+          error={!!errors.email}
+          helperText={errors.email ? errors.email.message : ""}
         />
         <TextField
-          margin="dense"
+          margin="normal"
           required
           fullWidth
           autoComplete="on"
@@ -39,7 +48,9 @@ export const SignUp = () => {
           name="password"
           id="signUpPassword"
           placeholder="Abc123!*"
-          {...register("password", { required: true })}
+          {...register("password", { required: "password is required" })}
+          error={!!errors.password}
+          helperText={errors.password ? errors.password.message : ""}
         />
         <Button variant="contained" type="submit">
           Sign Up
