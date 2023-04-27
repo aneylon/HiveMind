@@ -63,6 +63,7 @@ Be sure there are supporting tests for any changes that are made or features tha
 - [React Router](https://reactrouter.com)
 - [React Hook Form](https://react-hook-form.com/)
 - [React Spinners](https://www.davidhu.io/react-spinners/)
+- [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
 - [Redux](https://redux.js.org/)
 - [React Redux](https://react-redux.js.org/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
