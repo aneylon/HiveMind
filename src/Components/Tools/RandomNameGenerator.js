@@ -1,9 +1,16 @@
+import { Box, Button, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
 const RandomNameGenerator = () => {
   const [names, setNames] = useState([]);
-  const { register, handleSubmit, reset, setFocus } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    setFocus,
+    formState: { errors },
+  } = useForm({ mode: "onChange", reValidateMode: "onChange" });
   const letters = "abcdefghijklmnopqrstuvwxyz";
 
   const GenerateNames = (data) => {
@@ -35,37 +42,96 @@ const RandomNameGenerator = () => {
     let randomNumber = Math.floor(Math.random() * max);
     return randomNumber + min;
   };
-
+  // Todo : can be done without multiple useEffects?
   useEffect(() => {
     setFocus("numberOfParts");
   }, [setFocus]);
 
+  useEffect(() => {
+    // generate names on load of component
+    GenerateNames({
+      numberOfParts: 2,
+      numberToGenerate: 5,
+      maximumLetters: 5,
+      minimumLetters: 2,
+    });
+  }, []);
+
   return (
     <div>
       <h1>Random Name generator</h1>
-      <form onSubmit={handleSubmit(GenerateNames)}>
-        <input
+      <Box
+        component="form"
+        onSubmit={handleSubmit(GenerateNames)}
+        sx={{ width: 450 }}
+      >
+        <TextField
+          autoFocus
+          required
+          fullWidth
+          margin="normal"
+          name="numberOfParts"
+          id="numberOfParts"
           type="number"
           placeholder="Number of parts"
-          {...register("numberOfParts", { required: true })}
+          label="Number of parts"
+          {...register("numberOfParts", { required: "Required" })}
+          InputLabelProps={{ shrink: true }}
+          error={!!errors.numberOfParts}
+          helperText={errors.numberOfParts ? errors.numberOfParts.message : ""}
         />
-        <input
+        <TextField
+          required
+          fullWidth
+          margin="normal"
+          name="minimumLetters"
+          id="minimumLetters"
           type="number"
           placeholder="Minimum letters"
-          {...register("minimumLetters", { required: true })}
+          label="Minimum letters"
+          {...register("minimumLetters", { required: "Required" })}
+          InputLabelProps={{ shrink: true }}
+          error={!!errors.minimumLetters}
+          helperText={
+            errors.minimumLetters ? errors.minimumLetters.message : ""
+          }
         />
-        <input
+        <TextField
+          required
+          fullWidth
+          margin="normal"
+          name="maximumLetters"
+          id="maximumLetters"
           type="number"
           placeholder="Maximum letters"
-          {...register("maximumLetters", { required: true })}
+          label="Maximum letters"
+          {...register("maximumLetters", { required: "Required" })}
+          InputLabelProps={{ shrink: true }}
+          error={!!errors.maximumLetters}
+          helperText={
+            errors.maximumLetters ? errors.maximumLetters.message : ""
+          }
         />
-        <input
+        <TextField
+          required
+          fullWidth
+          margin="normal"
+          name="numberToGenerate"
+          id="numberToGenerate"
           type="number"
           placeholder="Number to generate"
-          {...register("numberToGenerate", { required: true })}
+          label="Number to generate"
+          {...register("numberToGenerate", { required: "Required" })}
+          InputLabelProps={{ shrink: true }}
+          error={!!errors.numberToGenerate}
+          helperText={
+            errors.numberToGenerate ? errors.numberToGenerate.message : ""
+          }
         />
-        <input type="submit" />
-      </form>
+        <Button type="submit" variant="contained">
+          Generate
+        </Button>
+      </Box>
       <div>
         <p>Generate some names!</p>
         <p>Names : {names.length}</p>
