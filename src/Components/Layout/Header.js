@@ -45,9 +45,6 @@ export const Header = () => {
             <Button component={Link} to="signIn" color="inherit">
               SignIn
             </Button>
-            <Button component={Link} to="signUp" color="inherit">
-              SignUp
-            </Button>
             <Button color="inherit">SignOut</Button>
           </nav>
         </Toolbar>
@@ -98,7 +95,7 @@ export const Header = () => {
         </Box>
       </Drawer>
       <Container>
-        <Box component="main" sx={{ flexgrow: 1, pl: 6 }}>
+        <Box component="main" sx={{ flexgrow: 1, pl: 6, ml: 15 }}>
           <Toolbar />
           <Outlet />
         </Box>

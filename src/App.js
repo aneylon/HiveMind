@@ -1,6 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { SignIn } from "./Components/Auth/SignIn";
-import { SignUp } from "./Components/Auth/SignUp";
 import { Dashboard } from "./Components/Dashboard/Dashboard";
 import { NotFound } from "./Components/NotFound/NotFound";
 import { About } from "./Components/About/About";
@@ -8,6 +6,7 @@ import { FAQ } from "./Components/About/FAQ";
 import { Header } from "./Components/Layout/Header";
 import { Tools } from "./Components/Tools/Tools";
 import { Admin } from "./Components/Admin/Admin";
+import { AuthTabs } from "./Components/Auth/AuthTabs";
 
 function App() {
   return (
@@ -22,8 +21,7 @@ function App() {
               <Route path=":subject" element={<FAQ />} />
             </Route>
             <Route path="admin" element={<Admin />} />
-            <Route path="signIn" element={<SignIn />} />
-            <Route path="signUp" element={<SignUp />} />
+            <Route path="signIn" element={<AuthTabs />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
