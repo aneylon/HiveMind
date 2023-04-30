@@ -1,7 +1,8 @@
-import { useParams } from "react-router";
+// import { useParams } from "react-router";
 
 export const FAQ = () => {
-  let { subject } = useParams();
+  // get the subject to know which section to expand.
+  // let { subject } = useParams();
 
   // todo : expand select subject section
   return (

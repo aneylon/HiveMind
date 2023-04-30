@@ -42,10 +42,6 @@ const RandomNameGenerator = () => {
     let randomNumber = Math.floor(Math.random() * max);
     return randomNumber + min;
   };
-  // Todo : can be done without multiple useEffects?
-  useEffect(() => {
-    setFocus("numberOfParts");
-  }, [setFocus]);
 
   useEffect(() => {
     // generate names on load of component
@@ -55,6 +51,8 @@ const RandomNameGenerator = () => {
       maximumLetters: 5,
       minimumLetters: 2,
     });
+    // suppress dependency warning.
+    // eslint-disable-next-line
   }, []);
 
   return (

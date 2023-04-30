@@ -33,7 +33,7 @@ Be sure there are supporting tests for any changes that are made or features tha
 
 # Todos
 
-- [ ] Add toasts for success and error messages to user.
+- [x] Add toasts for success and error messages to user.
 
 - [x] Add Router
 - [x] Set up Testing
@@ -48,9 +48,9 @@ Be sure there are supporting tests for any changes that are made or features tha
   - [x] Get news from fake back end
   - [x] Component for admin to add news
 
-- [-] Admin Section
+- [ ] Admin Section
 
-  - [-] News - Add, Edit, Delete
+  - [ ] News - Add, Edit, Delete
 
 - [ ] Users
   - [ ] Sign Up
