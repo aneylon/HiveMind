@@ -1,5 +1,6 @@
 import { Box, Button, TextField } from "@mui/material";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 export const SignIn = () => {
   const {
@@ -8,7 +9,12 @@ export const SignIn = () => {
     formState: { errors },
   } = useForm({ mode: "onChange", reValidateMode: "onChange" });
   const submitSignIn = (data) => {
+    // if cannot contact server show error to user
     console.log({ data });
+    toast.error("Cannot connect to server. Please try again later.");
+    console.error("SignIn Error", {
+      message: "Error connecting to server to sign in.",
+    });
   };
   return (
     <div>
