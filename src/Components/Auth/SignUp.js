@@ -1,5 +1,6 @@
 import { Box, Button, TextField } from "@mui/material";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 export const SignUp = () => {
   const {
@@ -12,6 +13,10 @@ export const SignUp = () => {
   });
   const submitSignUp = (data) => {
     console.log({ data });
+    toast.error("Cannot connect to server. Please try again later.");
+    console.error("SignUp Error", {
+      message: "Error connecting to server to sign up.",
+    });
   };
   return (
     <div>
