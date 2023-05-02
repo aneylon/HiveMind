@@ -19,8 +19,15 @@ import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import ConstructionIcon from "@mui/icons-material/Construction";
 import LiveHelpIcon from "@mui/icons-material/LiveHelp";
 import InfoIcon from "@mui/icons-material/Info";
+import { useLogout } from "../../Hooks/useSignOut";
+import { useAuthContext } from "../../Hooks/useAuthContext";
 
 export const Header = () => {
+  const { logout } = useLogout();
+  const { user } = useAuthContext();
+  const handleLogout = () => {
+    logout();
+  };
   return (
     <>
       <AppBar
@@ -42,10 +49,16 @@ export const Header = () => {
           </Typography>
 
           <nav>
-            <Button component={Link} to="signIn" color="inherit">
-              SignIn
-            </Button>
-            <Button color="inherit">SignOut</Button>
+            {!user && (
+              <Button component={Link} to="signIn" color="inherit">
+                SignIn
+              </Button>
+            )}
+            {user && (
+              <Button color="inherit" onClick={handleLogout}>
+                SignOut
+              </Button>
+            )}
           </nav>
         </Toolbar>
       </AppBar>

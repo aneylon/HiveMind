@@ -7,6 +7,7 @@ import { ThemeProvider, createTheme } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import { AuthContextProvider } from "./Context/AuthContext";
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -17,7 +18,9 @@ root.render(
   <ThemeProvider theme={darkTheme}>
     <CssBaseline />
     <React.StrictMode>
-      <App />
+      <AuthContextProvider>
+        <App />
+      </AuthContextProvider>
       <ToastContainer autoClose={2000} />
     </React.StrictMode>
   </ThemeProvider>

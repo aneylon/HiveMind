@@ -1,8 +1,10 @@
 import { Box, Button, TextField } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import { useSignup } from "../../Hooks/useSignUp";
 
 export const SignUp = () => {
+  const { signup, error, isLoading } = useSignup();
   const {
     handleSubmit,
     register,
@@ -11,8 +13,9 @@ export const SignUp = () => {
     mode: "onChange",
     reValidateMode: "onChange",
   });
-  const submitSignUp = (data) => {
+  const submitSignUp = async (data) => {
     console.log({ data });
+    await signup(data.email, data.password);
     toast.error("Cannot connect to server. Please try again later.");
     console.error("SignUp Error", {
       message: "Error connecting to server to sign up.",
