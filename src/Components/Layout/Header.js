@@ -83,12 +83,14 @@ export const Header = () => {
               </ListItemIcon>
               Tools
             </ListItemButton>
-            <ListItemButton component={Link} to="admin" color="inherit">
-              <ListItemIcon>
-                <AdminPanelSettingsIcon />
-              </ListItemIcon>
-              Admin
-            </ListItemButton>
+            {user && (
+              <ListItemButton component={Link} to="admin" color="inherit">
+                <ListItemIcon>
+                  <AdminPanelSettingsIcon />
+                </ListItemIcon>
+                Admin
+              </ListItemButton>
+            )}
           </List>
           <Divider />
           <List>
