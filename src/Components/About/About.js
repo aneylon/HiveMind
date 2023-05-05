@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Bug } from "./Bug";
 
 export const About = () => {
   return (
@@ -12,6 +13,7 @@ export const About = () => {
         The source code can be found{" "}
         <a href="https://github.com/aneylon/HiveMind">here</a>.
       </p>
+      <Bug />
     </>
   );
 };
