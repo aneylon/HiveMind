@@ -48,14 +48,19 @@ Be sure there are supporting tests for any changes that are made or features tha
   - [x] Get news from fake back end
   - [x] Component for admin to add news
 
+- [x] Dice Component
+
+  - [ ] Show negative modifier
+  - [ ] Allow multiples of dice
+
 - [ ] Admin Section
 
   - [ ] News - Add, Edit, Delete
 
-- [ ] Users
-  - [ ] Sign Up
-  - [ ] Sign In
-  - [ ] Sign Out
+- [x] Users
+  - [x] Sign Up
+  - [x] Sign In
+  - [x] Sign Out
 
 # Resource links
 

@@ -1,4 +1,4 @@
-import { Box, Button, TextField } from "@mui/material";
+import { Box, Button, Card, TextField, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -56,8 +56,8 @@ const RandomNameGenerator = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Random Name generator</h1>
+    <Card sx={{ padding: 2, margin: 2 }}>
+      <Typography variant="h3">Random Name generator</Typography>
       <Box
         component="form"
         onSubmit={handleSubmit(GenerateNames)}
@@ -141,7 +141,7 @@ const RandomNameGenerator = () => {
           </ul>
         )}
       </div>
-    </div>
+    </Card>
   );
 };
 export default RandomNameGenerator;
