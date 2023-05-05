@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { randomNumber } from "../../Shared/Random";
+import { Button, Card, Typography } from "@mui/material";
 
 export const characterClasses = [
   { name: "Fighter", highStat: "strength", hitDie: 8 },
@@ -46,8 +47,8 @@ export const CharacterGenerator = () => {
     return randomNumber(6) + randomNumber(6) + randomNumber(6);
   };
   return (
-    <div>
-      <h1>Character Generator</h1>
+    <Card sx={{ padding: 2, margin: 2 }}>
+      <Typography variant="h3">Character Generator</Typography>
       <div>
         <span>Class: {characterClass.name}</span>
       </div>
@@ -59,7 +60,9 @@ export const CharacterGenerator = () => {
         <span>Wis: {abilities.wisdom}</span>
         <span>Chr: {abilities.charisma}</span>
       </div>
-      <button onClick={generateCharacter}>Make a character</button>
-    </div>
+      <Button variant="contained" onClick={generateCharacter}>
+        Make a character
+      </Button>
+    </Card>
   );
 };
