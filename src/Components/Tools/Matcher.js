@@ -1,3 +1,4 @@
+import { Box, Button, Card, TextField, Typography } from "@mui/material";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -20,6 +21,7 @@ const Matcher = () => {
   }, [numberOfModels, numberOfPaints]);
 
   const handleSubmit = (event) => {
+    console.log("yo");
     event.preventDefault();
     let results = [];
     for (var i = 1; i <= numberOfModels; i++) {
@@ -54,29 +56,52 @@ const Matcher = () => {
         );
       });
     }
-    return <div>pick some numbers</div>;
+    return <Typography>Pick some numbers!</Typography>;
   };
 
   return (
-    <div>
-      <h1>Matcher!</h1>
-      <form onSubmit={handleSubmit}>
-        <input
+    <Card sx={{ padding: 2, margin: 2 }}>
+      <Typography variant="h3">Matcher!</Typography>
+      <Box component="form" onSubmit={handleSubmit} sx={{ width: 450 }}>
+        <TextField
+          autoFocus
+          required
+          fullWidth
+          margin="normal"
+          name="numberOfModels"
+          id="numberOfModels"
           type="number"
+          placeholder="number of models"
+          label="number of models"
           onChange={(event) => changeNumberOfModels(event)}
           value={numberOfModels}
-          placeholder="number of models"
+          InputLabelProps={{ shrink: true }}
         />
-        <input
+        <TextField
+          autoFocus
+          required
+          fullWidth
+          margin="normal"
+          name="numberOfPaints"
+          id="numberOfPaints"
           type="number"
+          placeholder="number of paints"
+          label="number of paints"
           onChange={(event) => changeNumberOfPaints(event)}
           value={numberOfPaints}
-          placeholder="number of paints"
+          InputLabelProps={{ shrink: true }}
         />
-        <button disabled={isDisabled}>Matchem!</button>
-      </form>
-      <div>{showMatched()}</div>
-    </div>
+        <Button
+          sx={{ marginTop: 3 }}
+          variant="contained"
+          type="submit"
+          disabled={isDisabled}
+        >
+          Matchem!
+        </Button>
+      </Box>
+      <Box sx={{ padding: 2 }}>{showMatched()}</Box>
+    </Card>
   );
 };
 

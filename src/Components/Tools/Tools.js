@@ -9,12 +9,14 @@ export const Tools = () => {
   return (
     <div>
       <h1>Tools</h1>
-      {/* TODO:  <Anagram /> */}
       <Matcher />
+      {/* TODO:
+      <Anagram /> 
       <ColorScheme />
       <Dice />
       <CharacterGenerator />
       <RandomNameGenerator />
+      */}
       <p>Moar things here...</p>
     </div>
   );
