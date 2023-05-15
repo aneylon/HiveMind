@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { request } from "../../Api/utils";
-import { Box, Button, TextField } from "@mui/material";
+import { Box, Button, TextField, TextareaAutosize } from "@mui/material";
 import { toast } from "react-toastify";
 
 export const AddNews = () => {
@@ -54,8 +54,11 @@ export const AddNews = () => {
           helperText={errors.title ? errors.title.message : ""}
         />
         <TextField
+          multiline
           required
           fullWidth
+          minRows={2}
+          maxRows={4}
           margin="normal"
           label="content"
           name="content"
