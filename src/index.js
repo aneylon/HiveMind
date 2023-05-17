@@ -8,6 +8,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { AuthContextProvider } from "./Context/AuthContext";
+import { store } from "./Redux/store";
+import { Provider } from "react-redux";
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -15,15 +17,17 @@ const darkTheme = createTheme({
 });
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <ThemeProvider theme={darkTheme}>
-    <CssBaseline />
-    <React.StrictMode>
-      <AuthContextProvider>
-        <App />
-      </AuthContextProvider>
-      <ToastContainer autoClose={2000} />
-    </React.StrictMode>
-  </ThemeProvider>
+  <Provider store={store}>
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <React.StrictMode>
+        <AuthContextProvider>
+          <App />
+        </AuthContextProvider>
+        <ToastContainer autoClose={2000} />
+      </React.StrictMode>
+    </ThemeProvider>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

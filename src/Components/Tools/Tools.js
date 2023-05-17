@@ -1,3 +1,4 @@
+import { Counter } from "../../Redux/Counter";
 import { CharacterGenerator } from "../ShadowDark/CharacterGenerator";
 import Anagram from "./Anagram";
 import ColorScheme from "./ColorScheme";
@@ -10,6 +11,7 @@ export const Tools = () => {
   return (
     <div>
       <h1>Tools</h1>
+      <Counter />
       <EnforcerNameGenerator />
       <RandomNameGenerator />
       {/* TODO:
