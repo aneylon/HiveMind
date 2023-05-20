@@ -6,15 +6,17 @@ import Dice from "./Dice";
 import EnforcerNameGenerator from "./EnforcerNameGenerator";
 import Matcher from "./Matcher";
 import RandomNameGenerator from "./RandomNameGenerator";
+import { Terminal } from "./Terminal";
 
 export const Tools = () => {
   return (
     <div>
       <h1>Tools</h1>
+      <Terminal />
+      {/* TODO:
       <Counter />
       <EnforcerNameGenerator />
       <RandomNameGenerator />
-      {/* TODO:
       <Anagram />
       <Matcher />
       <ColorScheme />
