@@ -1,7 +1,47 @@
 const Testing = () => {
   return (
-    <div>
-      <h1>Testing</h1>
+    <div style={{ padding: 15 }}>
+      <div
+        class="terminal"
+        style={{
+          backgroundColor: "black",
+          width: "450px",
+          height: "450px",
+          backgroundImage: "radial-gradient(rgba(0,150,0,0.75), black 120%",
+          fontFamily: "monospace",
+          padding: 5,
+          color: "lightgreen",
+          textShadow: "0 0 6px lightgreen",
+        }}
+      >
+        <p style={{ padding: 5 }}>this is a test</p>
+      </div>
+      <div
+        style={{
+          content: " ",
+          position: "absolute",
+          top: 15,
+          left: 15,
+          width: "450px",
+          height: "450px",
+          backgroundImage:
+            "repeating-linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15) 1px, rgba(255,255,255,0.15) 1px, rgba(255,255,255,0.15) 2px)",
+          padding: 5,
+        }}
+      ></div>
+      <div
+        style={{
+          width: "100%",
+          height: "100px",
+          zIndex: "8",
+          background:
+            "linear-gradient( 0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.2) 10%, rgba(0, 0, 0, 0.1) 100% )",
+          opacity: "0.1",
+          position: "absolute",
+          bottom: "100%",
+          animation: "scanline 10s linear infinite",
+        }}
+      ></div>
     </div>
   );
 };
