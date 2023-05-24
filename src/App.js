@@ -8,6 +8,7 @@ import { Tools } from "./Components/Tools/Tools";
 import { Admin } from "./Components/Admin/Admin";
 import { AuthTabs } from "./Components/Auth/AuthTabs";
 import { useAuthContext } from "./Hooks/useAuthContext";
+import Testing from "./Components/Testing";
 
 function App() {
   const { user } = useAuthContext();
@@ -15,6 +16,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
+          <Route path="testing" element={<Testing />} />
           <Route path="/" element={<Header />}>
             <Route index element={<Dashboard />} />
             <Route path="tools" element={<Tools />} />
