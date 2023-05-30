@@ -26,16 +26,14 @@ export const Terminal = () => {
             position: "relative",
             margin: 3,
             padding: 3,
-            color: "green",
+            color: "lightgreen",
             backgroundColor: "black",
             backgroundImage:
-              "radial-gradient(rgba(0, 150, 0, 0.33), black 120%)",
-            //   "repeating-linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15) 1px, rgba(255,255,255,0.15) 1px, rgba(255,255,255,0.15) 2px)",
-            // backgroundRepeat: "repeat, repeat",
+              "repeating-linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15) 1px, rgba(255,255,255,0.15) 1px, rgba(255,255,255,0.15) 2px), radial-gradient(rgba(0, 150, 0, 0.66), black 120%)",
             fontFamily: "VT323, monospace",
             fontWeight: "bold",
             fontSize: "1.5em",
-            textShadow: "0 0 6px black",
+            textShadow: "0 0 6px lightgreen",
             minWidth: 450,
             minHeight: 450,
           }}
@@ -44,17 +42,6 @@ export const Terminal = () => {
             {textToConvert}
           </Typography>
         </Box>
-        {/* <Box
-          sx={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            minWidth: 450,
-            minHeight: 450,
-            backgroundImage:
-              "repeating-linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15) 1px, rgba(255,255,255,0.15) 1px, rgba(255,255,255,0.15) 2px)",
-          }}
-        ></Box> */}
       </Box>
     </Card>
   );

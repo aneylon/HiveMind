@@ -36,7 +36,7 @@ const Testing = () => {
       <div
         class="terminal"
         style={{
-          // backgroundColor: "black",
+          backgroundColor: "black",
           width: "450px",
           height: "450px",
           backgroundImage: "radial-gradient(rgba(0,150,0,0.75), black 120%",
