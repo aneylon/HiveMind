@@ -1,21 +1,25 @@
+import "./Testing.css";
 const Testing = () => {
   return (
-    <div style={{ padding: 15 }}>
+    <div
+      style={{
+        padding: 15,
+        height: "450px",
+      }}
+    >
       <div
-        class="terminal"
         style={{
-          backgroundColor: "black",
           width: "450px",
           height: "450px",
-          backgroundImage: "radial-gradient(rgba(0,150,0,0.75), black 120%",
-          fontFamily: "monospace",
-          padding: 5,
-          color: "lightgreen",
-          textShadow: "0 0 6px lightgreen",
+          zIndex: "8",
+          background:
+            "linear-gradient( 0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.3) 10%, rgba(0, 0, 0, 0.1) 100% )",
+          opacity: "0.1",
+          position: "absolute",
+          bottom: "100%",
+          animation: "scanline 5s linear infinite",
         }}
-      >
-        <p style={{ padding: 5 }}>this is a test</p>
-      </div>
+      ></div>
       <div
         style={{
           content: " ",
@@ -30,18 +34,20 @@ const Testing = () => {
         }}
       ></div>
       <div
+        class="terminal"
         style={{
-          width: "100%",
-          height: "100px",
-          zIndex: "8",
-          background:
-            "linear-gradient( 0deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.2) 10%, rgba(0, 0, 0, 0.1) 100% )",
-          opacity: "0.1",
-          position: "absolute",
-          bottom: "100%",
-          animation: "scanline 10s linear infinite",
+          backgroundColor: "black",
+          width: "450px",
+          height: "450px",
+          backgroundImage: "radial-gradient(rgba(0,150,0,0.75), black 120%",
+          fontFamily: "VT323, monospace",
+          padding: 5,
+          color: "lightgreen",
+          textShadow: "0 0 6px lightgreen",
         }}
-      ></div>
+      >
+        <p style={{ padding: 5, height: "100%" }}>this is a test</p>
+      </div>
     </div>
   );
 };
