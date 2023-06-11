@@ -7,19 +7,36 @@ export const Terminal = () => {
       <Typography variant="h3">Retro Terminal</Typography>
       <Box>
         <TextField
-          sx={{ width: 350 }}
+          variant="standard"
+          sx={{
+            width: 800,
+            minHeight: 600,
+            margin: 2,
+            padding: 2,
+            textArea: {
+              color: "lightgreen",
+              textShadow: "0 0 6px lightgreen",
+              fontFamily: "VT323, monospace",
+              fontSize: "1.2em",
+              borderBottom: "",
+            },
+            backgroundColor: "black",
+            backgroundImage:
+              "repeating-linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15) 1px, rgba(255,255,255,0.15) 1px, rgba(255,255,255,0.15) 2px), radial-gradient(rgba(0, 150, 0, 0.66), black 120%)",
+          }}
           multiline
-          minRows={3}
-          maxRows={6}
+          minRows={10}
           placeholder="> awaiting input ..."
           onChange={(event) => {
             let text = event.target.value;
-            console.log(text);
+            // TODO: figure out how to convert text correctly.
             setTextToConvert(text);
           }}
+          InputProps={{ disableUnderline: true, spellCheck: false }}
         />
       </Box>
-      <Box>
+      {/* TODO: decide what to do about this... */}
+      <Box sx={{ display: "none" }}>
         <Box
           sx={{
             width: 350,
