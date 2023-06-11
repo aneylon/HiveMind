@@ -32,7 +32,7 @@ export const Terminal = () => {
             // TODO: figure out how to convert text correctly.
             setTextToConvert(text);
           }}
-          InputProps={{ disableUnderline: true }}
+          InputProps={{ disableUnderline: true, spellCheck: false }}
         />
       </Box>
       {/* TODO: decide what to do about this... */}
